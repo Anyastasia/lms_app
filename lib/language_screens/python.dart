@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class PythonScreen extends StatefulWidget {
@@ -12,7 +14,7 @@ class _PythonScreenState extends State<PythonScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Python Screen'),
+        title: const Text('Course: Python'),
       ),
       body: const Center(
         child: Text('Python'),
