@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'navbar.dart';
 
 void main() {
@@ -14,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -35,8 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My App',
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 108, 99, 255),
         appBar: AppBar(
           title: const Text('My App'),
         ),
