@@ -56,14 +56,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
     }
   }
 
-  void navScreen(String lang) {
-    if (lang == "Python"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
-    } else if (lang == "C"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const ClangScreen()),);
-    }
-  }
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
