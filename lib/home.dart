@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lms_app/auth.dart';
+
 
 import 'language_screens/clang.dart';
 import 'language_screens/cpp.dart';
@@ -19,6 +22,12 @@ class HomepageScreen extends StatefulWidget {
 }
 
 class _HomepageScreenState extends State<HomepageScreen> {
+  final User? user = Auth().currentUser;
+
+  Widget _title() {
+    return Text(user?.email ?? 'User email');
+  }
+
   final Map<String, String> _languages = {
     'Python': 'images/python.png',
     'C': 'images/clang.png',
@@ -64,7 +73,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
-                'Hello! User',
+                'Welcome, ',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
