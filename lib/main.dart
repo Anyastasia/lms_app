@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import 'navbar.dart';
+import 'firebase_test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Navigation()),
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
               );
             },
           ),
