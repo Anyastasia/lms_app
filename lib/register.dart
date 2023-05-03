@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:lms_app/login.dart';
 import 'package:lms_app/navbar.dart';
-import 'package:lms_app/register.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   
   // ignore: library_private_types_in_public_api
-  _LoginState createState() => _LoginState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 108,99,255),
+        elevation: 0,
+      ),
+
       body: Center(
         child:
       Container(
         alignment: Alignment.center,
         width: 350,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(top: 80, bottom: 80),
-              child: Image.asset("assets/images/etivacicon.png", width: 220)
-            ),
-            Column(
+        child: GestureDetector(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
+            children: [ 
               SizedBox(
                 width: 100,
                 height: 35,
@@ -39,7 +38,7 @@ class _LoginState extends State<Login> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Navigation()),
+                      MaterialPageRoute(builder: (context) => const Register()),
                     );
                   },
                   style: TextButton.styleFrom(
@@ -49,7 +48,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   child: const Text(
-                    'Log in', 
+                    'Register', 
                     style: TextStyle(
                       color: Color.fromARGB(255, 67, 62, 161),
                       fontSize: 15
@@ -60,18 +59,18 @@ class _LoginState extends State<Login> {
               Row( 
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                const Text("Don't have an account?", style: TextStyle(fontSize: 12,color: Colors.white, fontWeight: FontWeight.w500 ,letterSpacing: 1)),
-                TextButton(
+                  const Text("Alread have an account?", style: TextStyle(fontSize: 12,color: Colors.white, fontWeight: FontWeight.w500 ,letterSpacing: 1)),
+                  TextButton(
                     onPressed: ()=> Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Register()),
+                      MaterialPageRoute(builder: (context) => const Login()),
                     ),
-                    child: const Text("register here", style: TextStyle(fontSize: 12,color: Color.fromARGB(255, 207, 206, 225), fontWeight: FontWeight.w500 ,letterSpacing: 1))
+                    child: const Text("Login", style: TextStyle(fontSize: 12,color: Color.fromARGB(255, 207, 206, 225), fontWeight: FontWeight.w500 ,letterSpacing: 1))
                   )
                 ]
               ),
             ]
-          )]
+          )
         ),
       )
       )

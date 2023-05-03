@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lms_app/language_screens/cpp.dart';
-
 
 import 'language_screens/clang.dart';
 import 'language_screens/cpp.dart';
@@ -22,15 +20,15 @@ class HomepageScreen extends StatefulWidget {
 
 class _HomepageScreenState extends State<HomepageScreen> {
   final Map<String, String> _languages = {
-    'Python': 'images/python.png',
-    'C': 'images/clang.png',
-    'C++': 'images/cpp.png',
-    'CSS': 'images/css.png',
-    'Javascript': 'images/javascript.png',
-    'Java': 'images/java.png',
-    'Vue': 'images/vue.png',
-    'Flutter': 'images/flutter.png',
-    'HTML': 'images/html.png',
+    'Python': 'assets/images/python.png',
+    'C': 'assets/images/clang.png',
+    'C++': 'assets/images/cpp.png',
+    'CSS': 'assets/images/css.png',
+    'Javascript': 'assets/images/javascript.png',
+    'Java': 'assets/images/java.png',
+    'Vue': 'assets/images/vue.png',
+    'Flutter': 'assets/images/flutter.png',
+    'HTML': 'assets/images/html.png',
   };
 
 
