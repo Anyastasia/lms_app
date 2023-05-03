@@ -99,7 +99,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
                 mainAxisSpacing: 16.0,
                 crossAxisSpacing: 16.0,
                 children: List.generate(_languages.length, (index) {
-                  final language = _languages[index];
                   return Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
@@ -107,7 +106,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
+                        _navigateToLanguageScreen(_languages.keys.elementAt(index));
                       },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
