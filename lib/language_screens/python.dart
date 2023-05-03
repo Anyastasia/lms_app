@@ -12,22 +12,15 @@ class _PythonScreenState extends State<PythonScreen> {
   int maxPage = 5;
   String _getPageContent(int page) {
     if (page == 0) {
-      return 'C is a general-purpose programming language that was developed in the early 1970s by Dennis Ritchie at Bell Labs. '
-          'It is a low-level language that allows developers to interact with computer hardware and memory directly. '
-          'C is a compiled language, meaning that source code is translated into machine code by a compiler before it can be executed.';
+      return 'Python is a popular high-level programming language that emphasizes readability and simplicity. It was created in the late 1980s by Guido van Rossum, who named it after Monty Python`s Flying Circus comedy group. Since then, Python has become one of the most widely used programming languages in the world. One of the advantages of Python is its ease of use. It has a clear and concise syntax that makes it easy to learn for beginners. Python is also an interpreted language, which means that code can be executed without the need for compilation. This makes it faster and easier to write and test code.';
     } else if (page == 1) {
-      return 'C has had a profound impact on the world of computing, with many modern programming languages (such as C++, Java, and Python) being based on or influenced by C.'
-          'C is a procedural language, meaning that it follows a set of procedures and routines to perform tasks.';
+      return 'Python has a large and active community of developers who have created many libraries and frameworks to extend its functionality. Some popular libraries include NumPy, Pandas, and Matplotlib, which are used for data analysis and visualization. Popular web development frameworks include Flask and Django. Python also supports multiple programming paradigms, including object-oriented, functional, and procedural programming. Python is cross-platform and can run on many different operating systems, making it a popular choice for developers who need to create applications that can run on different platforms. Additionally, Python is open-source, which means that anyone can access and modify the source code.';
     } else if (page == 2) {
-      return 'C is a portable language, meaning that code written in C can be compiled and run on many different platforms and operating systems. '
-          'C is often used in systems programming, embedded systems, and operating system development due to its low-level nature and ability to directly manipulate hardware.';
+      return 'Python is often used for teaching programming in schools and universities due to its simplicity and ease of use. It is also used in online courses and tutorials, and there are many resources available to help people learn Python. Python has become a popular language for data science due to its powerful data manipulation and analysis libraries. These libraries, such as NumPy and Pandas, allow developers to easily process and analyze large datasets.';
     } else if (page == 3) {
-      return 'C has a relatively simple syntax, with a small number of keywords and constructs that can be combined to create complex programs. '
-          'C is a powerful language that provides developers with low-level control over a computer\'s hardware and memory, '
-          'but this power also comes with increased responsibility for managing memory and ensuring that programs are safe and secure.';
+      return 'Python is also commonly used in the field of artificial intelligence and machine learning. The TensorFlow and Keras libraries, for example, are popular for building and training neural networks. Python is a versatile language that can be used for a wide range of applications, from building desktop applications to developing web applications and mobile apps. It is also commonly used in scientific computing, finance, and gaming.';
     } else if (page == 4) {
-      return 'C has a large and active community of developers, with many open-source libraries and frameworks available to help developers build applications more quickly and efficiently.'
-          'C is a popular language for competitive programming due to its speed, efficiency, and low-level control over system resources.';
+      return 'Python has a strong community of developers who contribute to its development and maintenance. The Python Software Foundation oversees the development of the language and its standard library, and there are many online forums and user groups where developers can share knowledge and collaborate on projects.';
     } else {
       return "Error";
     }
@@ -37,7 +30,15 @@ class _PythonScreenState extends State<PythonScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Course: Python'),
+        title: const Text(
+          'Course: Python',
+          style: TextStyle(
+              fontSize: 25.0,
+              fontFamily: 'Poppins',
+              color: Colors.white,
+              letterSpacing: 1),
+        ),
+        backgroundColor: Color.fromARGB(255, 108, 99, 255).withOpacity(0.2),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -46,16 +47,17 @@ class _PythonScreenState extends State<PythonScreen> {
               child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.blue,
+              color: Colors.white,
             ),
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(20),
             child: Text(
               _getPageContent(_currentPage),
               style: const TextStyle(
-                color: Colors.white,
+                color: Color.fromARGB(255, 108, 99, 255),
                 fontSize: 20,
               ),
+              textAlign: TextAlign.center,
             ),
           )),
           const SizedBox(height: 20),
@@ -75,7 +77,9 @@ class _PythonScreenState extends State<PythonScreen> {
                   child: Text(
                     (index + 1).toString(),
                     style: TextStyle(
-                      color: _currentPage == index ? Colors.blue : Colors.grey,
+                      color: _currentPage == index
+                          ? Colors.white
+                          : Colors.white.withOpacity(0.3),
                       fontSize: 20,
                     ),
                   ),
