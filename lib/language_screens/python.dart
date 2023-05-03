@@ -12,7 +12,7 @@ class _PythonScreenState extends State<PythonScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Python Screen'),
+        title: const Text('Course: Python'),
       ),
       body: const Center(
         child: Text('Python'),
