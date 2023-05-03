@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
                 letterSpacing: 1),
           )),
       debugShowCheckedModeBanner: false,
-      home: const WidgetTree()
+      //home: const WidgetTree()
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
