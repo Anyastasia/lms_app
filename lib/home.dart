@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lms_app/language_screens/cpp.dart';
-
 
 import 'language_screens/clang.dart';
 import 'language_screens/cpp.dart';
@@ -56,14 +54,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
     }
   }
 
-  void navScreen(String lang) {
-    if (lang == "Python"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
-    } else if (lang == "C"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const ClangScreen()),);
-    }
-  }
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -99,7 +89,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
                 mainAxisSpacing: 16.0,
                 crossAxisSpacing: 16.0,
                 children: List.generate(_languages.length, (index) {
-                  final language = _languages[index];
                   return Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
@@ -107,7 +96,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
+                        _navigateToLanguageScreen(_languages.keys.elementAt(index));
                       },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
