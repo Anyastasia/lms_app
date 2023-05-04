@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lms_app/auth.dart';
 
 import 'language_screens/clang.dart';
 import 'language_screens/cpp.dart';
@@ -19,6 +21,12 @@ class HomepageScreen extends StatefulWidget {
 }
 
 class _HomepageScreenState extends State<HomepageScreen> {
+  final User? user = Auth().currentUser;
+
+  Widget _title() {
+    return Text(user?.email ?? 'User email');
+  }
+
   final Map<String, String> _languages = {
     'Python': 'images/python.png',
     'C': 'images/clang.png',
@@ -32,51 +40,24 @@ class _HomepageScreenState extends State<HomepageScreen> {
   };
 
   void _navigateToLanguageScreen(String language) {
-    if (language == "Python") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const PythonScreen()),
-      );
-    } else if (language == "C") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const ClangScreen()),
-      );
-    } else if (language == "C++") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const CppScreen()),
-      );
-    } else if (language == "CSS") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const CssScreen()),
-      );
-    } else if (language == "Javascript") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const JavascriptScreen()),
-      );
-    } else if (language == "Java") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const JavaScreen()),
-      );
-    } else if (language == "Vue") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const VueScreen()),
-      );
-    } else if (language == "Flutter") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const FlutterScreen()),
-      );
-    } else if (language == "HTML") {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const HtmlScreen()),
-      );
+    if (language == "Python"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
+    } else if (language == "C"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const ClangScreen()),);
+    } else if (language == "C++"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const CppScreen()),);
+    } else if (language == "CSS"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const CssScreen()),);
+    } else if (language == "Javascript"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const JavascriptScreen()),);
+    } else if (language == "Java"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const JavaScreen()),);
+    } else if (language == "Vue"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const VueScreen()),);
+    } else if (language == "Flutter"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const FlutterScreen()),);
+    } else if (language == "HTML"){
+      Navigator.push(context,MaterialPageRoute(builder: (context) => const HtmlScreen()),);
     }
   }
 
