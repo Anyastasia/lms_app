@@ -23,10 +23,6 @@ class HomepageScreen extends StatefulWidget {
 class _HomepageScreenState extends State<HomepageScreen> {
   final User? user = Auth().currentUser;
 
-  Widget _title() {
-    return Text(user?.email ?? 'User email');
-  }
-
   final Map<String, String> _languages = {
     'Python': 'images/python.png',
     'C': 'images/clang.png',
@@ -61,6 +57,32 @@ class _HomepageScreenState extends State<HomepageScreen> {
     }
   }
 
+  Widget _title() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Text(
+        user?.email ?? 'User email',
+        style: const TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ); 
+  }
+
+  Widget _courses(){
+    return const Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'Courses',
+        style: TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,26 +90,8 @@ class _HomepageScreenState extends State<HomepageScreen> {
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              'Hello! User',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20.0),
-            child: Text(
-              'Courses',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          _title(),
+          _courses(),
           Expanded(
             child: GridView.count(
               crossAxisCount: 3,

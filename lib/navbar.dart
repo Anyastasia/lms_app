@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'home.dart';
-import 'quiz.dart';
-import 'profile.dart';
+import 'package:lms_app/home.dart';
+import 'package:lms_app/quiz.dart';
+import 'package:lms_app/profile.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
