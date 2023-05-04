@@ -61,7 +61,7 @@ class _RegisterState extends State<Register> {
                 children: [
                   const Text("Alread have an account?", style: TextStyle(fontSize: 12,color: Colors.white, fontWeight: FontWeight.w500 ,letterSpacing: 1)),
                   TextButton(
-                    onPressed: ()=> Navigator.push(
+                    onPressed: ()=> Navigator.pop(
                       context,
                       MaterialPageRoute(builder: (context) => const Login()),
                     ),
