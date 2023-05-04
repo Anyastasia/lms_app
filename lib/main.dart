@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _visible = true;
   bool _visible2 = false;
   double _position = 0;
-  double _position2 = 500;
+  double _position2 = 0;
 
   int counter = 0;
 
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         _visible2 = true;
       }else if(counter >= 2){
         _position = 0;
-        _position2 = 500;
+        _position2 = 0;
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const WidgetTree()),
@@ -76,68 +76,78 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color.fromARGB(255, 108,99,255),
         body: Center(
           child: Container(
-            constraints: const BoxConstraints( 
-              maxWidth: 450,
-            ),
             alignment: Alignment.center,
             width: double.infinity,
-            child: Stack(
-              children: [
-                AnimatedPositioned(
-                  left: _position,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.fastOutSlowIn,
-                  width: MediaQuery. of(context). size. width,
-                  child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset("assets/images/etivacicon.png", fit: BoxFit.contain),
-                          const Padding(padding: EdgeInsets.only(top: 65),
-                            child: Text("Explore your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
-                          ),
-                          const Text("new skills today", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
-                          const Padding(padding: EdgeInsets.only(top: 5),
-                            child: Text("You can learn various kinds of", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
-                          ),
-                          const Text("courses in your hand", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
-                        ]
+            child: SizedBox(
+              width: 400,
+              child: Stack(
+                children: [
+                  AnimatedPositioned(
+                    left: _position,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.fastOutSlowIn,
+                    width: MediaQuery. of(context). size. width,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children:  [
+                        Container(
+                          constraints: const BoxConstraints(maxWidth: 400),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Image.asset("assets/images/etivacicon.png", fit: BoxFit.contain),
+                                const Padding(padding: EdgeInsets.only(top: 65),
+                                  child: Text("Explore your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                                ),
+                                const Text("new skills today", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                                const Padding(padding: EdgeInsets.only(top: 5),
+                                  child: Text("You can learn various kinds of", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
+                                ),
+                                const Text("courses in your hand", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
+                              ]
+                            )
+                          )
+                        )
+                      ]
+                    )
+                  ),
+                  AnimatedPositioned(
+                    left: MediaQuery.of(context).size.width-_position2,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.fastOutSlowIn,
+                    width: MediaQuery. of(context). size. width,
+                    child: Row(children:[
+                    Container(
+                      constraints: const BoxConstraints(maxWidth: 400),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 155, left: 30, right: 30),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/secondicon.png", fit: BoxFit.contain),
+                            const Padding(padding: EdgeInsets.only(top: 55),
+                              child: Text("Empower your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                            ),
+                            const Text("education to next level", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                            const Padding(padding: EdgeInsets.only(top: 5),
+                              child: Text("Learn new things and develop your", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
+                            ),
+                            const Text("problem solving skills", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
+                          ]
+                        )
                       )
                     )
-                  )
-                ),
-                AnimatedPositioned(
-                  left: _position2,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.fastOutSlowIn,
-                  width: MediaQuery. of(context). size. width,
-                  child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 155, left: 30, right: 30),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Image.asset("assets/images/secondicon.png", fit: BoxFit.contain),
-                          const Padding(padding: EdgeInsets.only(top: 55),
-                            child: Text("Empower your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
-                          ),
-                          const Text("education to next level", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
-                          const Padding(padding: EdgeInsets.only(top: 5),
-                            child: Text("Learn new things and develop your", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
-                          ),
-                          const Text("problem solving skills", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
-                        ]
-                      )
+                    ]
                     )
                   )
-                )
-              ]
+                ]
+              )
             )
           )
         ),
@@ -152,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   _visible = !_visible;
                   _visible2 = !_visible2;
                   _position = _visible ? 0 : -500;
-                  _position2 = _visible2 ? 0 : -500;
+                  _position2 = MediaQuery.of(context).size.width;
                 }),
                 nextBtn(),
               },
