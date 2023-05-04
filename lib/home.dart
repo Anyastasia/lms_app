@@ -40,24 +40,51 @@ class _HomepageScreenState extends State<HomepageScreen> {
   };
 
   void _navigateToLanguageScreen(String language) {
-    if (language == "Python"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
-    } else if (language == "C"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const ClangScreen()),);
-    } else if (language == "C++"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const CppScreen()),);
-    } else if (language == "CSS"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const CssScreen()),);
-    } else if (language == "Javascript"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const JavascriptScreen()),);
-    } else if (language == "Java"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const JavaScreen()),);
-    } else if (language == "Vue"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const VueScreen()),);
-    } else if (language == "Flutter"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const FlutterScreen()),);
-    } else if (language == "HTML"){
-      Navigator.push(context,MaterialPageRoute(builder: (context) => const HtmlScreen()),);
+    if (language == "Python") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const PythonScreen()),
+      );
+    } else if (language == "C") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const ClangScreen()),
+      );
+    } else if (language == "C++") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const CppScreen()),
+      );
+    } else if (language == "CSS") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const CssScreen()),
+      );
+    } else if (language == "Javascript") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const JavascriptScreen()),
+      );
+    } else if (language == "Java") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const JavaScreen()),
+      );
+    } else if (language == "Vue") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const VueScreen()),
+      );
+    } else if (language == "Flutter") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const FlutterScreen()),
+      );
+    } else if (language == "HTML") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const HtmlScreen()),
+      );
     }
   }
 
@@ -71,7 +98,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              'Hello! User',
+              'Hello! Welcome to ETIVAC',
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
@@ -84,7 +111,8 @@ class _HomepageScreenState extends State<HomepageScreen> {
               'Courses',
               style: TextStyle(
                 fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.italic,
               ),
             ),
           ),
