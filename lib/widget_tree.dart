@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lms_app/navbar.dart';
 import 'package:lms_app/pages/login_register_page.dart';
-import 'package:lms_app/pages/home_page.dart';
 import 'package:lms_app/auth.dart';
 
 class WidgetTree extends StatefulWidget {
