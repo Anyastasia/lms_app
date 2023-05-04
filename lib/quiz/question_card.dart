@@ -7,6 +7,7 @@ class QuestionCard extends StatelessWidget {
   const QuestionCard(
       {super.key, required this.backgroundColor, required this.borderRadius});
 
+  static const Color fontColor = Color.fromARGB(255, 108, 99, 255);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,9 +19,12 @@ class QuestionCard extends StatelessWidget {
         children: [
           const Text(
             'Question x of xx',
+            style: TextStyle(color: fontColor),
           ),
           const Text(
             'Question',
+            textScaleFactor: 2,
+            style: TextStyle(color: fontColor),
           ),
           Column(
             children: const [
