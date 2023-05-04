@@ -2,15 +2,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lms_app/auth.dart';
 
-import 'language_screens/clang.dart';
-import 'language_screens/cpp.dart';
-import 'language_screens/css.dart';
-import 'language_screens/flutter.dart';
-import 'language_screens/html.dart';
-import 'language_screens/java.dart';
-import 'language_screens/javascript.dart';
-import 'language_screens/vue.dart';
-import 'language_screens/python.dart';
+import 'package:lms_app/language_screens/clang.dart';
+import 'package:lms_app/language_screens/cpp.dart';
+import 'package:lms_app/language_screens/css.dart';
+import 'package:lms_app/language_screens/flutter.dart';
+import 'package:lms_app/language_screens/html.dart';
+import 'package:lms_app/language_screens/java.dart';
+import 'package:lms_app/language_screens/javascript.dart';
+import 'package:lms_app/language_screens/vue.dart';
+import 'package:lms_app/language_screens/python.dart';
 
 class HomepageScreen extends StatefulWidget {
   const HomepageScreen({Key? key}) : super(key: key);
