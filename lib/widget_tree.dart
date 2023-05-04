@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lms_app/navbar.dart';
 import 'package:lms_app/pages/login_register_page.dart';
-import 'package:lms_app/pages/home_page.dart';
 import 'package:lms_app/auth.dart';
 
 class WidgetTree extends StatefulWidget {
@@ -13,11 +13,13 @@ class WidgetTree extends StatefulWidget {
 class _WidgetTreeState extends State<WidgetTree> {
   @override
   Widget build(BuildContext context) {
+    debugPrint('WidgetTree build');
     return StreamBuilder(
       stream: Auth().authStateChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return HomePage();
+          debugPrint(snapshot.toString());
+          return const Navigation();
         } else {
           return const LoginPage();
         }
@@ -25,3 +27,5 @@ class _WidgetTreeState extends State<WidgetTree> {
     );
   }
 }
+
+// matthewperrybustarde@gmail.com

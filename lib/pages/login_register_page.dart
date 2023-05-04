@@ -42,10 +42,6 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  Widget _title() {
-    return const Text("Firebase auth");
-  }
-
   Widget _entryField(String title, TextEditingController controller) {
     
     return TextField(
@@ -57,10 +53,11 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _errorMessage() {
-    return Text(errorMsg == '' ? '' : 'Humm ? $errorMsg');
+    return Text(errorMsg == '' ? '' : 'Hmm $errorMsg');
   }
 
   Widget _submitButton() {
+    debugPrint("submitbutton pressed");
     return ElevatedButton(
       onPressed: isLogin ? signInWithEmailAndPassword : createUserWithEmailAndPassword,
       child: Text(isLogin ? 'Login' : 'Register'),
@@ -68,33 +65,52 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _loginOrRegisterButton() {
+    debugPrint("loginorregister button pressed");
     return TextButton(
       onPressed: () {
         setState(() {
           isLogin = !isLogin;
         });
       },
-      child: Text(isLogin ? 'Register instead' : 'Login instead'),
+      style: TextButton.styleFrom(
+        backgroundColor: Colors.white70,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.0))
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 8,bottom: 8, left: 30, right: 30),
+        child: Text(
+          isLogin ? 'Register instead' : 'Login instead',
+          style: const TextStyle(
+            color: Color.fromARGB(255, 67, 62, 161),
+            fontSize: 15
+          )
+        )
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: _title(),
-      ),
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _entryField('Email', _controllerEmail),
-            _entryField('Password', _controllerPassword),
-            _errorMessage(),
-            _submitButton(),
-            _loginOrRegisterButton(),
-          ],
+        child: Container(
+          alignment: Alignment.center,
+          width: 350,
+          child: GestureDetector(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                _entryField('Email', _controllerEmail),
+                _entryField('Password', _controllerPassword),
+                _errorMessage(),
+                _submitButton(),
+                _loginOrRegisterButton(),
+              ],
+            ),
+          ),
         ),
       ),
     );

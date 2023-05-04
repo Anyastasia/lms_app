@@ -8,7 +8,7 @@ class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
 
   @override
-  
+
   // ignore: library_private_types_in_public_api
   _NavigationState createState() => _NavigationState();
 }
@@ -26,8 +26,9 @@ class _NavigationState extends State<Navigation> {
       _selectedIndex = index;
     });
   }
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -48,7 +49,7 @@ class _NavigationState extends State<Navigation> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Color.fromARGB(255, 108, 99, 255),
         onTap: _onItemTapped,
       ),
     );
