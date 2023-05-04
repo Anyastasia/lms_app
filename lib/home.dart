@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lms_app/auth.dart';
 
-
 import 'language_screens/clang.dart';
 import 'language_screens/cpp.dart';
 import 'language_screens/css.dart';
@@ -40,7 +39,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
     'HTML': 'images/html.png',
   };
 
-
   void _navigateToLanguageScreen(String language) {
     if (language == "Python"){
       Navigator.push(context,MaterialPageRoute(builder: (context) => const PythonScreen()),);
@@ -64,75 +62,74 @@ class _HomepageScreenState extends State<HomepageScreen> {
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Welcome, ',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
+          child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Hello! User',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Text(
-                'Courses',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Text(
+              'Courses',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Expanded(
-              child: GridView.count(
-                crossAxisCount: 3,
-                childAspectRatio: 1.0,
-                padding: const EdgeInsets.all(16.0),
-                mainAxisSpacing: 16.0,
-                crossAxisSpacing: 16.0,
-                children: List.generate(_languages.length, (index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: InkWell(
-                      onTap: () {
-                        _navigateToLanguageScreen(_languages.keys.elementAt(index));
-                      },
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            _languages[_languages.keys.elementAt(index)]!,
-                            width: 50.0,
+          ),
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 3,
+              childAspectRatio: 1.0,
+              padding: const EdgeInsets.all(16.0),
+              mainAxisSpacing: 16.0,
+              crossAxisSpacing: 16.0,
+              children: List.generate(_languages.length, (index) {
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white10,
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      _navigateToLanguageScreen(
+                          _languages.keys.elementAt(index));
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          _languages[_languages.keys.elementAt(index)]!,
+                          width: 50.0,
+                        ),
+                        const SizedBox(height: 8.0),
+                        Text(
+                          _languages.keys.elementAt(index),
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
-                          const SizedBox(height: 8.0),
-                          Text(
-                            _languages.keys.elementAt(index),
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  );
-                }),
-
-              ),
-            )
-          ],
-        )
-      ),
+                  ),
+                );
+              }),
+            ),
+          )
+        ],
+      )),
     );
   }
 }
