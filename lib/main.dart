@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lms_app/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:lms_app/pages/login_register_page.dart';
 import 'widget_tree.dart';
 import 'firebase_options.dart';
-import 'navbar.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         counter = 0;
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Login()),
+          MaterialPageRoute(builder: (context) => const WidgetTree()),
         );
       }
     });
