@@ -83,6 +83,4 @@ class DefaultFirebaseOptions {
     iosClientId: '437565129752-ldgduig1ve9488fv5ub25i2jgg1tdotb.apps.googleusercontent.com',
     iosBundleId: 'com.example.lmsApp',
   );
-
-  get options => null;
 }
