@@ -204,32 +204,30 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Container(
-                      child: Column(
-                        children:[
-                          Visibility(
-                            visible: isLogin,
-                            child:Padding(
-                              padding: EdgeInsets.only(top: 80, bottom: 80),
-                              child: Image.asset("assets/images/etivacicon.png", width: 220)
+                    Column(
+                      children:[
+                        Visibility(
+                          visible: isLogin,
+                          child:Padding(
+                            padding: const EdgeInsets.only(top: 80, bottom: 80),
+                            child: Image.asset("assets/images/etivacicon.png", width: 220)
+                          )
+                        ),
+                        Visibility(
+                          visible: !isLogin,
+                          child: 
+                            const Positioned(
+                              left: 0,
+                              child: Text("Register Account", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
                             )
-                          ),
-                          Visibility(
-                            visible: !isLogin,
-                            child: 
-                              Positioned(
-                                left: 0,
-                                child: Text("Register Account", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
-                              )
-                          ),
-                          _entryField('Email', _controllerEmail),
-                          _entryField('Password', _controllerPassword),
-                          Visibility(
-                            visible: !isLogin,
-                            child: _entryField('Confirm Password', _controllerPassword2)
-                          ),
-                        ]
-                      ),
+                        ),
+                        _entryField('Email', _controllerEmail),
+                        _entryField('Password', _controllerPassword),
+                        Visibility(
+                          visible: !isLogin,
+                          child: _entryField('Confirm Password', _controllerPassword2)
+                        ),
+                      ]
                     ),
                     _errorMessage(),
                     _submitButton(),
@@ -238,7 +236,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children:[
-                          Text("Don't have an account?"),
+                          const Text("Don't have an account?"),
                           SizedBox(
                             width: 100,
                             child:TextButton(
@@ -247,7 +245,7 @@ class _LoginPageState extends State<LoginPage> {
                                   isLogin = !isLogin;
                                 });
                               },
-                              child: Text("register here", style: TextStyle(color: Color.fromARGB(255, 200,200,200)),)
+                              child: const Text("register here", style: TextStyle(color: Color.fromARGB(255, 200,200,200)),)
                             )
                           )
                         ]
@@ -258,7 +256,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children:[
-                          Text("Already have an account?"),
+                          const Text("Already have an account?"),
                           SizedBox(
                             width: 60,
                             child:TextButton(
@@ -267,7 +265,7 @@ class _LoginPageState extends State<LoginPage> {
                                   isLogin = !isLogin;
                                 });
                               },
-                              child: Text("Login", style: TextStyle(color: Color.fromARGB(255, 200,200,200)),)
+                              child: const Text("Login", style: TextStyle(color: Color.fromARGB(255, 200,200,200)),)
                             )
                           )
                         ]
