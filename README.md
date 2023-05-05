@@ -2,9 +2,14 @@
 
 This is a Learning Management System (LMS) developed using Flutter and Firebase. The LMS provides a platform for students to interact and manage courses/
 
-This Learning Management System Contains following features
-- User login / register
-- Course list
+## Features
+### Authentication
+- User login with email and password
+- User registration with email and password
+
+### User Management
+- Profile
+- View courses
 - Video tutorial
 
 ## Technologies Used
