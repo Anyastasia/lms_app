@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lms_app/navbar.dart';
+import 'package:lms_app/register.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -14,50 +15,66 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child: Container(
-      alignment: Alignment.center,
-      width: 350,
-      child: GestureDetector(
+      body: Center(
+        child: Container(
+          alignment: Alignment.center,
+          width: 350,
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Navigation()),
-                );
-              },
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.white70,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 80, bottom: 80),
+                child: Image.asset("assets/images/etivacicon.png", width: 220)
               ),
-              child: const Padding(
-                  padding:
-                      EdgeInsets.only(top: 8, bottom: 8, left: 30, right: 30),
-                  child: Text('Log in',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 67, 62, 161),
-                          fontSize: 15))),
-            ),
-            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-              const Text("Don't have an account?"),
-              TextButton(
-                  onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Login()),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: 100,
+                    height: 35,
+                    child:TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Navigation()),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white70,
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10.0))
+                        ),
                       ),
-                  child: const Text("register here",
-                      style: TextStyle(
-                          fontSize: 15.0,
-                          color: Color.fromARGB(255, 167, 165, 219),
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1)))
-            ]),
-          ])),
-    )));
+                      child: const Text(
+                        'Log in', 
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 67, 62, 161),
+                          fontSize: 15
+                        )
+                      )
+                    )
+                  ),
+                  Row( 
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                    const Text("Don't have an account?", style: TextStyle(fontSize: 12,color: Colors.white, fontWeight: FontWeight.w500 ,letterSpacing: 1)),
+                    TextButton(
+                        onPressed: ()=> Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Register()),
+                        ),
+                        child: const Text("register here", style: TextStyle(fontSize: 12,color: Color.fromARGB(255, 207, 206, 225), fontWeight: FontWeight.w500 ,letterSpacing: 1))
+                      )
+                    ]
+                  ),
+                ]
+              )
+            ]
+          ),
+        )
+      )
+    );
   }
 }

@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
               letterSpacing: 1),
       )),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'asd',)
+      //home: const WidgetTree()
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -42,6 +43,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool _visible = true;
+  bool _visible2 = false;
+  double _position = 0;
+  double _position2 = 0;
+
   int counter = 0;
 
   void nextBtn() {
@@ -49,13 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
       counter++;
       if (counter == 1) {
         _visible = false;
-      } else if (counter == 2) {
-        _visible = true;
-        counter = 0;
+        _visible2 = true;
+      }else if(counter >= 2){
+        _position = 0;
+        _position2 = 0;
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const WidgetTree()),
         );
+        counter = 0;
       }
     });
   }
@@ -66,56 +73,119 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'My App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Color.fromARGB(255, 108, 99, 255),
-          body: Center(
-              child: Column(children: [
-            Stack(children: [
-              Visibility(
-                  visible: _visible,
-                  child: AnimatedOpacity(
-                    opacity: _visible ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 200),
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 60.0),
-                      child: Image(image: AssetImage("images/etivacicon.png")),
-                    ),
-                    // child: Image(image: AssetImage("images/etivacicon.png")),
-                  )),
-              Visibility(
-                  visible: !_visible,
-                  child: AnimatedOpacity(
-                      opacity: _visible ? 0.0 : 1.0,
-                      duration: const Duration(milliseconds: 200),
-                      child: GestureDetector(
+        backgroundColor: Color.fromARGB(255, 108,99,255),
+        body: Center(
+          child: Container(
+            alignment: Alignment.center,
+            width: double.infinity,
+            child: SizedBox(
+              width: 400,
+              child: Stack(
+                children: [
+                  AnimatedPositioned(
+                    left: _position,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.fastOutSlowIn,
+                    width: MediaQuery. of(context). size. width,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children:  [
+                        Container(
+                          constraints: const BoxConstraints(maxWidth: 400),
                           child: Padding(
-                        padding: EdgeInsets.only(top: 60.0),
-                        child:
-                            Image(image: AssetImage("images/secondicon.png")),
-                      )))),
-            ])
-          ])),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 50, right: 20),
-            child: FloatingActionButton.extended(
-              onPressed: () => {nextBtn()},
+                            padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Image.asset("assets/images/etivacicon.png", fit: BoxFit.contain),
+                                const Padding(padding: EdgeInsets.only(top: 65),
+                                  child: Text("Explore your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                                ),
+                                const Text("new skills today", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                                const Padding(padding: EdgeInsets.only(top: 5),
+                                  child: Text("You can learn various kinds of", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
+                                ),
+                                const Text("courses in your hand", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
+                              ]
+                            )
+                          )
+                        )
+                      ]
+                    )
+                  ),
+                  AnimatedPositioned(
+                    left: MediaQuery.of(context).size.width-_position2,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.fastOutSlowIn,
+                    width: MediaQuery. of(context). size. width,
+                    child: Row(children:[
+                    Container(
+                      constraints: const BoxConstraints(maxWidth: 400),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 155, left: 30, right: 30),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/secondicon.png", fit: BoxFit.contain),
+                            const Padding(padding: EdgeInsets.only(top: 55),
+                              child: Text("Empower your", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                            ),
+                            const Text("education to next level", style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 25, letterSpacing: 2, wordSpacing: 1, fontFamily: "Poppins"),),
+                            const Padding(padding: EdgeInsets.only(top: 5),
+                              child: Text("Learn new things and develop your", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins"))
+                            ),
+                            const Text("problem solving skills", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 10, letterSpacing: 1.5, wordSpacing: 1, fontFamily: "Poppins")),
+                          ]
+                        )
+                      )
+                    )
+                    ]
+                    )
+                  )
+                ]
+              )
+            )
+          )
+        ),
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 30, right: 20),
+          child: SizedBox(
+            width: 90,
+            height: 40,
+            child:FloatingActionButton.extended(
+              onPressed: ()=>{
+                setState(() {
+                  _visible = !_visible;
+                  _visible2 = !_visible2;
+                  _position = _visible ? 0 : -500;
+                  _position2 = MediaQuery.of(context).size.width;
+                }),
+                nextBtn(),
+              },
               backgroundColor: Colors.white,
               shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8.0))),
-              label: Padding(
-                  padding: EdgeInsets.zero,
-                  child: Container(
-                      width: 80.0,
-                      // height: 20.0,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Next",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.black87),
-                      ))),
-            ),
-          )),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0))
+              ),
+              label: const Padding(
+                padding: EdgeInsets.zero,
+                child: Text(
+                  "Next",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.black87
+                  ),
+                )
+              ),
+              elevation: 0,
+            )
+          )
+        )
+      ),
     );
   }
 }
