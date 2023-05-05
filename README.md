@@ -36,10 +36,10 @@ flutter pub get
 flutter run
 ```
 ## Contributors
-- <a href="https://github.com/MakuAren">Mark Allen Cabutaje</a>  - App development and design
-- <a href="https://github.com/Anyastasia">John Christian Buenaflor</a> - App development and design
-- <a href="https://github.com/npbstrd">Mattew Perry Bustarde</a> - App development and design
-- <a href="https://github.com/J-Allyson30">Jean Allyson Junsay</a> - UI Design and data mining
+- <a href="https://github.com/MakuAren">Mark Allen Cabutaje</a>  - App development/developer
+- <a href="https://github.com/Anyastasia">John Christian Buenaflor</a> - App development/developer
+- <a href="https://github.com/npbstrd">Mattew Perry Bustarde</a> - App development/developer
+- <a href="https://github.com/J-Allyson30">Jean Allyson Junsay</a> - UI design and Data mining
 
 ## Screenshots
 <p align="center">
