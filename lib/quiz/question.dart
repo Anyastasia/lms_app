@@ -51,7 +51,11 @@ class _QuestionState extends State<Question> {
           borderRadius: BorderRadius.circular(widget.borderRadius),
         ),
         padding: const EdgeInsets.symmetric(vertical: 16),
-        child: Center(child: Text(widget.text)),
+        child: Center(
+            child: Text(
+          widget.text,
+          style: TextStyle(color: widget.foregroundColor),
+        )),
       ),
     );
   }

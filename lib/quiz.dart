@@ -11,6 +11,11 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  final takenCourses = {
+    "C++",
+    "Python",
+    "Flutter"
+  };
   @override
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -51,8 +56,8 @@ class _QuizScreenState extends State<QuizScreen> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: Quiz(
-                        image: 'images/cpp.png',
-                        language: 'C++',
+                        image: 'images/python.png',
+                        language: 'Python',
                         buttonText: 'Take Quiz',
                       ),
                     ),

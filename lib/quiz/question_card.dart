@@ -17,24 +17,31 @@ class QuestionCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Question x of xx',
-            style: TextStyle(color: fontColor),
-          ),
-          const Text(
-            'Question',
-            textScaleFactor: 2,
-            style: TextStyle(color: fontColor),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Column(
+              children: const [
+                Text(
+                  'Question x of xx',
+                  style: TextStyle(color: fontColor),
+                ),
+                Text(
+                  'Question',
+                  textScaleFactor: 2,
+                  style: TextStyle(color: fontColor),
+                ),
+              ],
+            ),
           ),
           Column(
             children: const [
-              SizedBox(height: 8),
+              SizedBox(height: 12),
               Question(text: 'Choice 1'),
-              SizedBox(height: 8),
+              SizedBox(height: 12),
               Question(text: 'Choice 2'),
-              SizedBox(height: 8),
+              SizedBox(height: 12),
               Question(text: 'Choice 3'),
-              SizedBox(height: 8),
+              SizedBox(height: 12),
             ],
           )
         ],
