@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:lms_app/home.dart';
-// import 'package:lms_app/quiz.dart';
 import 'package:lms_app/profile.dart';
+import 'video.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class _NavigationState extends State<Navigation> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomepageScreen(),
-    //VideoScreen(),
+    VideoScreen(),
     ProfileScreen(),
   ];
 
@@ -40,8 +39,8 @@ class _NavigationState extends State<Navigation> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.quiz),
-            label: 'Quiz',
+            icon: Icon(Icons.movie),
+            label: 'Video Tutorials',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),

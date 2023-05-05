@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import '../videos/video_player.dart';
-import './quiz_questions.dart';
 
-class Quiz extends StatelessWidget {
+class Video extends StatelessWidget {
   final String image;
   final String language;
   final String buttonText;
   final String asset;
-  const Quiz(
+  const Video(
       {super.key,
       required this.image,
       required this.language,
@@ -30,7 +29,10 @@ class Quiz extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(children: [
                 Column(children: [
-                  Image.asset(image),
+                  Image.asset(
+                    image,
+                    width: 50,
+                  ),
                   Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Text(language))
