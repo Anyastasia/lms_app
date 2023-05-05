@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "437565129752",
+    "firebase_url": "https://etivac-lms-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "etivac-lms",
+    "storage_bucket": "etivac-lms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437565129752:android:729b6a130e0126c91d6f6d",
+        "android_client_info": {
+          "package_name": "com.example.lms_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437565129752-jrgividhi41atj8mqrd9tpb6t6883m1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU3N0CqM4Hzlj1R5C0SFWESeqG2KymV1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437565129752-jrgividhi41atj8mqrd9tpb6t6883m1k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "437565129752-ldgduig1ve9488fv5ub25i2jgg1tdotb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lmsApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

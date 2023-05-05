@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'home.dart';
+import 'package:lms_app/home.dart';
+import 'package:lms_app/profile.dart';
 import 'video.dart';
-import 'profile.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
@@ -49,7 +48,7 @@ class _NavigationState extends State<Navigation> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Color.fromARGB(255, 108, 99, 255),
         onTap: _onItemTapped,
       ),
     );
