@@ -42,14 +42,15 @@ flutter run
 - <a href="https://github.com/J-Allyson30">Jean Allyson Junsay</a> - UI and datamining
 
 ## Screenshots
-![Intro1](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-1.png)
-![Intro2](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-2.png)
-![Registration](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Registration.png)
-![Login](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Login.png)
-![Home](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Home.png)
-![Course](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Course.png)
-![Video](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Video.png)
-![VideoTutorial](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/VideoTutoral.png)
-![Profile](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Profile.png)
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-1.png" width=300 alt="Intro1">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-2.png" width=300 alt="Intro2">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Registration.png" width=300 alt="Registration">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Login.png" width=300 alt="Login">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Home.png" width=300 alt="Home">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Course.png" width=300 alt="Course">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Video.png" width=300 alt="Video">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/VideoTutoral.png" width=300 alt="VideoTutorial">
+<img src="https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Profile.png" width=300 alt="Profile">
+</p>
 
