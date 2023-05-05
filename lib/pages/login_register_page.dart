@@ -108,7 +108,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _submitButton() {
-    debugPrint("submitbutton pressed");
     return Padding(
       padding: EdgeInsets.only(bottom: 10),
       child: 
@@ -140,7 +139,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _loginOrRegisterButton() {
-    debugPrint("loginorregister button pressed");
     return TextButton(
       onPressed: () {
         setState(() {

@@ -56,7 +56,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: Quiz(
-                        image: 'images/python.png',
+                        image: 'assets/images/python.png',
                         language: 'Python',
                         buttonText: 'Take Quiz',
                       ),
@@ -64,7 +64,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: Quiz(
-                        image: 'images/cpp.png',
+                        image: 'assets/images/cpp.png',
                         language: 'C++',
                         buttonText: 'Take Quiz',
                       ),

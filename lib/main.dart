@@ -189,36 +189,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-// class MyHomePage extends StatefulWidget {
-//   const MyHomePage({super.key, required this.title});
-//   final String title;
-
-//   @override
-//   State<MyHomePage> createState() => _MyHomePageState();
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'My App',
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: const Text('My App'),
-//         ),
-//         body: Center(
-//           child: GestureDetector(
-//             child: const Text('Go to my new screen!'),
-//             onTap: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(builder: (context) => const Navigation()),
-//               );
-//             },
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
