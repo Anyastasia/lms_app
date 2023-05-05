@@ -40,4 +40,16 @@ flutter run
 - <a href="https://github.com/Anyastasia">John Christian Buenaflor</a> - Frontend
 - <a href="https://github.com/npbstrd">Mattew Perry Bustarde</a> - Backend
 - <a href="https://github.com/J-Allyson30">Jean Allyson Junsay</a> - UI and datamining
+
 ## Screenshots
+![Intro1](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-1.png)
+![Intro2](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Intro-2.png)
+![Registration](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Registration.png)
+![Login](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Login.png)
+![Home](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Home.png)
+![Course](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Course.png)
+![Video](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Video.png)
+![VideoTutorial](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/VideoTutoral.png)
+![Profile](https://raw.githubusercontent.com/Anyastasia/lms_app/master/screenshots/Profile.png)
+
+
