@@ -1,9 +1,9 @@
-# lms_app
+# Etivac - a Learning Management System
 
-A Learning Management System written in Dart with Flutter framework.
+Etivac is a learning management system written in Dart with Flutter Framework for the frontend and Firebase for the backend.
 
 This Learning Management System Contains following features
 
-- Dashboard
+- User login / register
 - Course list
-- Course details page
+- Video tutorial
