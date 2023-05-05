@@ -23,10 +23,6 @@ class HomepageScreen extends StatefulWidget {
 class _HomepageScreenState extends State<HomepageScreen> {
   final User? user = Auth().currentUser;
 
-  Widget _title() {
-    return Text(user?.email ?? 'User email');
-  }
-
   final Map<String, String> _languages = {
     'Python': 'assets/images/python.png',
     'C': 'assets/images/clang.png',
@@ -86,6 +82,32 @@ class _HomepageScreenState extends State<HomepageScreen> {
         MaterialPageRoute(builder: (context) => const HtmlScreen()),
       );
     }
+  }
+
+  Widget _title() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Text(
+        user?.email ?? 'User email',
+        style: const TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ); 
+  }
+
+  Widget _courses(){
+    return const Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'Courses',
+        style: TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 
   @override
