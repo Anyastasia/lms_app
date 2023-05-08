@@ -14,8 +14,8 @@ class _VideoNetState extends State<VideoNet> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network('https://media.allstar.gg/642c678ed500193b38d0fd5c/clips/6442c9378ffc3a0008a1a885.mp4?source=iframe_unknown');
-    //_controller = VideoPlayerController.network('https://animepahe.com/play/0b814568-9acf-fe60-205b-029606834876/119f93619212d623f073981bb987d7457b876497a50f28c0c4254bd7c67c7ea1');
+    //_controller = VideoPlayerController.network('https://media.allstar.gg/642c678ed500193b38d0fd5c/clips/6442c9378ffc3a0008a1a885.mp4?source=iframe_unknown');
+    _controller = VideoPlayerController.network('https://cdn.kastatic.org/ka-youtube-converted/FCMxA3m_Imc.mp4/FCMxA3m_Imc.mp4#t=0');
     _initializeVideoPlayerFuture = _controller?.initialize();
     _controller?.setLooping(true);
     _controller?.setVolume(0.5);
