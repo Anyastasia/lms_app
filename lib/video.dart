@@ -78,7 +78,7 @@ class _VideoScreenState extends State<VideoScreen> {
                         textScaleFactor: 1.5,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.white)),
-                    Text('<Name>', style: TextStyle(color: Colors.white))
+                    // Text('<Name>', style: TextStyle(color: Colors.white))
                   ]),
                 ),
               ),

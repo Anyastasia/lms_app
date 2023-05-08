@@ -47,9 +47,9 @@ class Video extends StatelessWidget {
                               builder,
                               MaterialPageRoute(
                                   builder: (context) => VideoPlayerScreen(
-                                        asset: asset,
-                                        title: language,
-                                      )));
+                                      asset: asset,
+                                      title: language,
+                                      url: 'https://youtu.be/WEm3EUdicDg')));
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16),
