@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import '../videos/video_player.dart';
-import './quiz_questions.dart';
 
-class Quiz extends StatelessWidget {
+class Video extends StatelessWidget {
   final String image;
   final String language;
   final String buttonText;
   final String asset;
-  const Quiz(
+  final String url;
+  const Video(
       {super.key,
       required this.image,
       required this.language,
       required this.buttonText,
-      required this.asset});
+      required this.asset,
+      required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,10 @@ class Quiz extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(children: [
                 Column(children: [
-                  Image.asset(image),
+                  Image.asset(
+                    image,
+                    width: 50,
+                  ),
                   Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Text(language))
@@ -45,9 +49,10 @@ class Quiz extends StatelessWidget {
                               builder,
                               MaterialPageRoute(
                                   builder: (context) => VideoPlayerScreen(
-                                        asset: asset,
-                                        title: language,
-                                      )));
+                                      asset: asset,
+                                      title: language,
+                                      url: url
+                                  )));
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16),
