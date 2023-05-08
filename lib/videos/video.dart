@@ -6,12 +6,14 @@ class Video extends StatelessWidget {
   final String language;
   final String buttonText;
   final String asset;
+  final String url;
   const Video(
       {super.key,
       required this.image,
       required this.language,
       required this.buttonText,
-      required this.asset});
+      required this.asset,
+      required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,8 @@ class Video extends StatelessWidget {
                                   builder: (context) => VideoPlayerScreen(
                                       asset: asset,
                                       title: language,
-                                      url: 'https://youtu.be/WEm3EUdicDg')));
+                                      url: url
+                                  )));
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16),

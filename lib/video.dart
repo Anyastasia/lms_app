@@ -13,47 +13,47 @@ class _VideoScreenState extends State<VideoScreen> {
   final double spacing = 8;
   final courses = [
     {
-      'image': 'images/python.png',
+      'image': 'python.png',
       'language': 'Python',
-      'asset': 'videos/Python_crash_course.mp4'
+      'asset': 'Python_crash_course.mp4'
     },
     {
-      'image': 'images/c.png',
+      'image': 'c.png',
       'language': 'C',
-      'asset': 'videos/C_crash_course.mp4'
+      'asset': 'C_crash_course.mp4'
     },
     {
-      'image': 'images/cpp.png',
+      'image': 'cpp.png',
       'language': 'C++',
-      'asset': 'videos/Cplusplus_Crash_course.mp4'
+      'asset': 'Cplusplus_Crash_course.mp4'
     },
     {
-      'image': 'images/css.png',
+      'image': 'css.png',
       'language': 'CSS',
       'asset': 'videos/CSS_crash_course.mp4'
     },
     {
-      'image': 'images/javascript.png',
+      'image': 'javascript.png',
       'language': 'JavaScript',
       'asset': 'videos/Javascript_crash_course.mp4'
     },
     {
-      'image': 'images/java.png',
+      'image': 'java.png',
       'language': 'Java',
       'asset': 'videos/Java_crash_course.mp4'
     },
     {
-      'image': 'images/vue.png',
+      'image': 'vue.png',
       'language': 'Vue',
       'asset': 'videos/Vue_crash_course.mp4'
     },
     {
-      'image': 'images/flutter.png',
+      'image': 'flutter.png',
       'language': 'Flutter',
       'asset': 'videos/Flutter_crash_course.mp4'
     },
     {
-      'image': 'images/html.png',
+      'image': 'html.png',
       'language': 'HTML',
       'asset': 'videos/HTML_crash_course.mp4'
     },
@@ -100,19 +100,21 @@ class _VideoScreenState extends State<VideoScreen> {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 8),
                         child: Video(
-                          image: 'images/vue.png',
+                          image: 'assets/images/vue.png',
                           language: 'Vue',
                           buttonText: 'Watch Video',
                           asset: 'videos/Vue_crash_course.mp4',
+                          url: 'https://youtu.be/bzlFvd0b65c',
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 8),
                         child: Video(
-                          image: 'images/cpp.png',
+                          image: 'assets/images/cpp.png',
                           language: 'C++',
                           buttonText: 'Watch Video',
                           asset: 'videos/Cplusplus_Crash_course.mp4',
+                          url: 'https://youtu.be/ZzaPdXTrSb8',
                         ),
                       ),
                     ],
