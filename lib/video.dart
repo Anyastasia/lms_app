@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lms_app/videos/video_net.dart';
 import './videos/video.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -64,7 +65,7 @@ class _VideoScreenState extends State<VideoScreen> {
     return (Scaffold(
         backgroundColor: const Color.fromARGB(255, 108, 99, 255),
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 48, horizontal: 16),
+          padding: EdgeInsets.symmetric(vertical: 48, horizontal: 16),
           child: Column(
             children: [
               Container(
@@ -86,8 +87,8 @@ class _VideoScreenState extends State<VideoScreen> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Column(
-                    children: const [
-                      Padding(
+                    children: [
+                      const Padding(
                         padding: EdgeInsets.only(top: 16, bottom: 8),
                         child: Align(
                           alignment: Alignment.centerLeft,
@@ -97,7 +98,7 @@ class _VideoScreenState extends State<VideoScreen> {
                           ),
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(vertical: 8),
                         child: Video(
                           image: 'assets/images/vue.png',
@@ -107,7 +108,7 @@ class _VideoScreenState extends State<VideoScreen> {
                           url: 'https://youtu.be/bzlFvd0b65c',
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(vertical: 8),
                         child: Video(
                           image: 'assets/images/cpp.png',
@@ -117,6 +118,19 @@ class _VideoScreenState extends State<VideoScreen> {
                           url: 'https://youtu.be/ZzaPdXTrSb8',
                         ),
                       ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => VideoNet())
+                          );
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 8),
+                          child: Text('Internet Video', style: TextStyle(color: Colors.white),),
+                        ),
+                      )
+
                     ],
                   ),
                 ),
